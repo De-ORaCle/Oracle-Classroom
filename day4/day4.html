@@ -1,0 +1,298 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <title>Day 4 - Introduction to CSS</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header id="header" class="alt">
+        <div class="logo"><a id="logo" href="day4.html">Virtual<span> Classroom</span></a></div>
+        <a id="menu-btn" href="#menu">Menu</a>
+    </header>
+
+    <!-- Nav -->
+    <nav id="menu">
+        <ul class="links">
+            <li><a href="../index.html">Homepage</a></li>
+            <li><a href="#parte1">Introduction to CSS</a></li>
+            <li><a href="#parte2">Comments</a></li>
+            <li><a href="#parte3">CSS Box Model</a></li>
+            <li><a href="#parte5">Positioning and Floating</a></li>
+            <li><a href="#parte6">Assignment</a></li>
+        </ul>
+    </nav>
+
+    <!-- Banner -->
+    <section id="banner">
+        <div class="inner">
+            <header>
+                <h1>Welcome back to your <span class="change-color">Virtual Class</span></h1>
+                <p>We've covered basics of programming and HTML in the previous class, if you didn't catch any of that <a href="../Day1/day1.html" id="coloR">click here</a> to start from the beginning. Today, we'll be covering Introduction to CSS and more
+                    today. It'll be a really long class, brace up. <br><br> CSS is really broad and even if you're familiar with it, you could still catch a thing or two in this class. Let's get started.</p>
+            </header>
+            <a href="#main" class="button big scrolly">Get down to business</a>
+        </div>
+    </section>
+
+    <!-- Main -->
+    <div id="main">
+
+        <!-- Section -->
+        <section id="parte1" class="wrapper style1">
+            <div class="inner">
+                <!-- 2 Columns -->
+                <div class="flex flex-2">
+                    <div class="col col1">
+                        <div class="image round fit">
+                            <a class="link"><img src="images/basics.jpg" alt="" /></a>
+                        </div>
+                    </div>
+                    <div class="col col2">
+                        <h3>Basics of CSS</h3>
+                        <p>Now that we’ve covered quite a bit of HTML, let’s move on to CSS. CSS stands for Cascading Stylesheet and as the name suggests, CSS is all about styling and making your website look gorgeous. <br><br>The latest version of CSS is
+                            CSS3. Unlike previous versions of CSS (namely CSS1 and CSS2.1), CSS3 splits the language into different modules so that each module can be developed separately at a different pace. Each module adds new features or extends the
+                            capabilities of features previously defined in CSS 2.1. Essentially, CSS3 is simply an extension of CSS2.1.</p>
+                    </div>
+                </div>
+                <div class="external-wrap">
+                    <h4>Applying CSS Code</h4>
+                    <p>There are three ways to apply CSS code to our site. <br><br> The first is by linking to an external file. This is the recommended method. To do linking, you need to write your CSS rules in a separate text file and save it with a .css
+                        extension. The syntax for adding the rules to your HTML code is
+                    </p>
+                    <div class="frame">
+                        <iframe id="myFrame" srcdoc="<p> &lt; link rel= &quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;style.css&quot; &gt;</p>"></iframe>
+                    </div>
+                    <p><br>You add the &lt;link&gt; tag to the head element, between the &lt;head&gt;...&lt;/head&gt; tags. The first two attributes rel and type tell the browser that this is a CSS stylesheet. You do not need to modify them. The last attribute
+                        href is where you specify the path to the CSS file that you want to link to. A CSS file is simply a file that contains CSS rules, without any HTML tags. An example is shown below. Don’t worry if the code does not make sense to
+                        you, we’ll cover them very soon.</p>
+                    <div class="frame">
+                        <iframe id="myFrame1" srcdoc="<p>body { <br> &nbsp;&nbsp;&nbsp;&nbsp;margin: 0; <br> &nbsp;&nbsp;&nbsp;&nbsp;background-color: green; <br> } </p>"></iframe>
+                    </div>
+                    <p><br> Save this code as “style.css” in the same folder as the .html file. You can then use the &lt;link&gt; tag above to link this CSS file to your HTML file. <br><br>The second method to add CSS rules to our site is to embed the code
+                        directly into our HTML source code, within the head element. This is done with the &lt;style&gt; tag. An example is shown below. The embedded CSS code starts after the &lt;style&gt; start tag and ends before the &lt;/style&gt;
+                        end tag.</p>
+                    <div class="frame">
+                        <iframe id="myFrame2" srcdoc="<p> &lt; head&gt; <br> &nbsp;&nbsp;&nbsp;&nbsp;&lt; style&gt; <br> &nbsp;&nbsp;&nbsp;&nbsp;div { <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;color: blue;<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;width: 100px; <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;height: 200px; <br> &nbsp;&nbsp;&nbsp;&nbsp;}<br> &nbsp;&nbsp;&nbsp;&nbsp; /style&gt; <br>&lt; /head&gt;</p>"></iframe>
+                    </div>
+                    <p><br> The last method is to use inline CSS. Inline CSS is specified in the start tag of the element you want to apply it to, using the <em>style</em> attribute. Each rule ends with a semi-colon (;). An example is:</p>
+                    <em>&lt;div style="text-decoration:underline; color:blue;"&gt;Some text&lt;/div&gt;</em>
+                    <p><br>Out of the three methods, linking is the preferred method. Linking separates the HTML content from the styling rules and makes it easier to maintain our codes. It is also extremely useful when we need to apply the same CSS rules
+                        to multiple web pages. <br><br>Embedded CSS, on the other hand, is commonly used when the rules only apply to one web page. <br><br>Inline CSS is handy when you need to apply a rule to only one element, or when you want to override
+                        other CSS rules that apply to the same element. This is because inline CSS has a higher precedence than CSS code added using the other two methods. We’ll discuss order of precedence later. However, inline CSS mixes styling with
+                        content and should be avoided whenever possible.</p>
+                    <h4>Syntax of a CSS rule</h4>
+                    <p>Now that we know how to apply CSS rules to our HTML files, let’s move on to learn some actual CSS code. The first thing to learn about CSS is its syntax, which is relatively straightforward. The syntax is:</p>
+                    <em>selector { property : value; property : value; property : value; }</em>
+                    <p><br>For instance, if you want to style the contents inside a &lt;div&gt; tag, you write the rule as <br><br><em> div { <br> &nbsp;&nbsp;&nbsp;&nbsp;background-color: green; <br> &nbsp;&nbsp;&nbsp;&nbsp;font-size: 12px; <br> }</em>                        <br><br>The first word div is the selector. It tells the browser that the set of rules inside the curly brackets { } applies to all elements with the &lt;div&gt; tag. <br><br>Inside the curly brackets, you write all your declarations.
+                        You start by declaring the property that you want to set (<em>background-color</em> in the first declaration), followed by a colon (:). Next, you give the value that you want (<em>green </em>in this case). Finally, you end each
+                        declaration with a semi-colon (;). <br><br>Indentation and line breaks do not matter in CSS. You can also write your declarations like this: <br><br> <em>div { background-color: green; font-size: 12px; }</em> <br><br>Pretty straightforward
+                        right? Great! Let’s move on...
+                    </p>
+                    <h4>Selecting an Element</h4>
+                    <p>In the example above, the rules declared in the curly brackets will apply to ALL elements with a &lt;div&gt; tag. However, most of the time, we want greater variation. Suppose you want one &lt;div&gt; element to have a font size of
+                        12px and another to have a font size of 14px. How would you do it?</p>
+                    <h4>Selecting Classes and IDs</h4>
+                    <p>There are basically two ways to do it. The first method is to use the id attribute. In your HTML document, instead of just using the &lt;div&gt; tag, you can add an id attribute to it. For instance, you can write <em><br><br> &lt;div id=”para1”&gt;
+                        <br> &nbsp;&nbsp;&nbsp;&nbsp;Some text.<br> &lt;/div&gt;<br> <br> &lt;div id=”para2”&gt;<br> &nbsp;&nbsp;&nbsp;&nbsp;More text.<br> &lt;/div&gt; </em><br><br>In our CSS code, we can then select the respective id by adding a # sign
+                        in front of the id name. An example is shown below:<br><br><em>div {<br>background-color: green;<br>}<br><br>#para1<br>{<br>&nbsp;&nbsp;&nbsp;&nbsp;font-size: 12px;<br>}<br><br>#para2 <br>{<br>font-size: 14px;<br>}</em><br><br>The
+                        first rule applies to all elements with the &lt;div&gt; tag. The second rule only applies to the element with id=”para1”. The third rule only applies to the element with id=”para2”. <br><br>In addition to using the selector #para1,
+                        you can also be more specific and write div#para1, with no space before and after the # sign. Both methods will select the same element, but the second method has a higher precedence (more on this later). <br><br>Note that an id
+                        should be unique within a page. Two &lt;div id=”para1”&gt; tags is not allowed. One &lt;div id=”para1”&gt; and one &lt;p id=”para1”&gt; tag is also not allowed as both have the same id. Although your HTML and CSS code will work
+                        even if you have two elements with the same id, problems will arise when you start using Javascript or other scripting languages on your website. <br><br>If you need to apply the same CSS rules to two different elements, you can
+                        use a class. A class is similar to an id, with the exception that a class need not be unique. In addition, an id has a higher precedence than a class.<br><br>For now, let’s consider the following code:<br><br> <em>&lt;div class=”myclass1”&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;Some text.<br>&lt;/div&gt;<br><br>&lt;p class=”myclass1”&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;More text.<br>&lt;/p&gt;<br><br>&lt;div&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;Yet more text.<br>&lt;/div&gt;</em>                        If you want to select all &lt;div&gt; elements (i.e. the first and third element), you write <br><br>div { … }<br><br>If you want to select all elements with class=”myclass1” (i.e. the first and second element), you add a dot (.)
+                        in front of the class name, like this:<br><br>.myclass1 { … }<br><br>If you only want to select &lt;p&gt; tags with class=”myclass1” (i.e. the second element), you write<br><br> p.myclass { … }<br><br> There should be no space
+                        before and after the dot. An element can have more than one classes. Multiple classes are separated with a space in the HTML attribute. For instance, the div below has two classes: myclass1 and myclass2. &lt;div class=”myclass1
+                        myclass2”&gt;
+                        <br>…<br>&lt;/div&gt;<br><br>If we have the following CSS code,<br><br>.myclass1 { … }<br><br>.myclass2 { … }<br><br>the rules for both myclass1 and myclass2 will apply to the above &lt;div&gt;.
+                    </p>
+                    <h4>More Selectors</h4>
+                    <p>In addition to selecting an element by id and class, CSS offers a large variety of ways to specify the elements that we want to select. <br><br><b>Selecting Multiple Elements</b> <br><br>For instance, we can select multiple elements
+                        at one go. If we want to select the &lt;div&gt;, &lt;p&gt; and &lt;ul&gt; elements, we write:<br><br>div, p, ul { … }<br><br><b>Selecting Child Elements</b> <br><br>If we want to select all the &lt;p&gt; elements inside &lt;div&gt;
+                        elements, we write<br><br>div p { … }<br><br>Note that there is no comma between div and p. In this case, the CSS rules will only apply to &lt;p&gt; elements that are inside &lt;div&gt; elements. For instance, if we have the HTML
+                        structure below, the rules will apply to ‘I am a paragraph inside div’ and not to ‘I am a stand-alone paragraph’.<br><br>&lt;div&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;I am a paragraph inside div&lt;/p&gt;<br>&lt;/div&gt;<br><br>                        &lt;p&gt;I am a stand-alone paragraph&lt;/p&gt;<br><br>The first paragraph ‘I am a paragraph inside div’ is called a child element of the &lt;div&gt; tag as its start and end tags (&lt;p&gt; and &lt;/p&gt;) lie entirely within
+                        the &lt;div&gt;...&lt;/div&gt; tags.<br><br><b>Selecting by Attribute</b><br><br>You can also select an element based on its attribute. If you want to select all hyperlinks that link to http://www.oraclevc.netlify.app, you write
+                        <br><br>a[href=”http://www.oraclevc.netlify.app”] { … }<br><br>There should be no space before the square bracket. If you have the following HTML code, only the first link will be selected.<br><br>&lt;a href=”http://www.oraclevc.netlify.app”&gt;Learn
+                        Coding Fast&lt;/a&gt;<br><br>&lt;a href=”http://www.google.com”&gt;Google&lt;/a&gt;<br><br><b>Selecting Pseudo-classes</b> <br><br>Another commonly used selector is the pseudo-class selector. A pseudo-class refers to a special
+                        state of an element. The most common pseudo-classes are those for the &lt;a&gt;...&lt;/a&gt; element. A hyperlink can be in one of four states: <br><br>link (an unvisited link) <br>visited (a visited link)<br>hover (when the user
+                        mouses over it), or<br>active (when the link is clicked). <br><br>We can select a hyperlink based on the state it is in. For instance, to select the hover state, we write <br><br>a:hover { … }<br><br>The keyword hover is added
+                        to the back of the a selector using a colon (:), with no spaces before and after the colon.<br><br> In addition to selecting different states of a hyperlink, we can also use pseudo-classes is to select child elements. Suppose we
+                        have a &lt;div&gt; element with three &lt;p&gt; child elements: <br><br>&lt;div&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;I am the first child&lt;/p&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp&lt;p&gt;I am the second child&lt;/p&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp&lt;p&gt;I
+                        am the third child&lt;/p&gt;<br>&lt;/div&gt;<br><br>We can use the first-child pseudo-class to select the first &lt;p&gt; element. We can also use the last-child selector to select the last child or the nth-child(n) selector to
+                        select the nth child.<br><br>For instance, if we write<br><br>p:nth-child(2) { … }<br><br>we’ll be selecting the paragraph ‘I am the second child’ because of the number ‘2’ in the parenthesis ( ).<br><br><b>Selecting Pseudo-elements</b><br><br>                        In addition to pseudo-classes, CSS also has the concept of pseudo-elements. A pseudo-element refers to a specified part of an element, such as the first letter or the first line of an element.<br><br> For instance, if we have the
+                        following &lt;p&gt; element:<br><br> &lt;p&gt;This is some text.&lt;/p&gt;<br><br> We can select the first letter (T) by writing<br><br> p::first-letter { … }<br><br> Note that a double colon is used in this case. Another pseudo-element
+                        is the first-line element. This will select the first line of the text.<br><br> Finally, we can use the before and after pseudo-elements to insert content before, or after, the content of an element. For instance, if we want to
+                        add an exclamation mark after all H1 elements, we can write<br><br>h1::after {<br>&nbsp;&nbsp;&nbsp;&nbsp;content: “!”;<br>}<br><br>This will automatically append an exclamation mark after all H1 elements. If we have the following
+                        HTML code <br><br>&lt;h1&gt;This is a heading&lt;/h1&gt; <br><br>we’ll get <br><br>
+                        <h1 id="inline-head">This is a heading!</h1> <br><br>
+                    </p>
+                    <h4>Case Insensitivity</h4>
+                    <p>For the most part, CSS selectors and rules are case-insensitive. Hence, you can either write<br><br> div {<br> &nbsp;&nbsp;&nbsp;&nbsp;Background-color: GREEN;<br> }<br><br> or<br><br> DIV {<br> &nbsp;&nbsp;&nbsp;&nbsp;background-coloR:
+                        green;
+                        <br> }<br><br> Both will work equally well. The only exception to this case-insensitivity is when selecting classes and ids.<br><br> If we have<br><br> &lt;div id= “myID”&gt;Some text&lt;/div&gt;<br><br>div#myID will select the
+                        above element while div#MYID will not.<br><br>
+                    </p>
+                    <h3>Order of Precedence</h3>
+                    <p>
+                        Now that we’ve learnt how to select elements, let us move on to a very important concept in CSS: order of precedence.<br><br> As mentioned earlier, we can apply CSS code to our website in three different ways. It is common for
+                        a programmer to use more than one way to apply CSS code to a site. For instance, a website may have CSS rules defined in an external file AND some additional CSS rules embedded within its &lt;style&gt;...&lt;/style&gt; tags. This
+                        may result in more than one rule being applied to the same element. One of the most frustrating experience about working with CSS, especially when you are first starting out, is when you try to apply a css style to an element and
+                        the page simply seems to ignore your rule. Most of the time, this is due to the order of precedence. Specifically, this happens when more than one rule applies to the same element, and another rule has a higher precedence than
+                        the one you are specifying.<br><br> Three principles control which CSS rule has a higher precedence.<br><br>
+                    </p>
+                    <h4>Principle 1: The more specific the selector, the higher the precedence</h4>
+                    <p>
+                        We won’t go into details about how to calculate the specificity of a selector. The main point to remember is that an id is considered to be more specific than a class, and a class more specific than an element. Let’s consider the code below:<br><br>div
+                        { font-size: 10px; }<br> #myId { font-size: 12px; }<br> .myClass { font-size: 14px; }<br> &lt;div id=”myId” class=”myClass”&gt;Some text&lt;/div&lt;<br><br> Since the &lt;div&lt; element has class=”myClass” and id=”myId”, all three
+                        rules div, #myId and .myClass will apply to the &lt;div&lt; element. However, as id has the highest precedence, “Some text” will be displayed with a font size of 12px.<br><br> In addition, another point to note about specificity
+                        is that the more detailed your selector, the higher the precedence. For instance, div#myId has a higher precedence than #myId. This is because div#myId is considered to be more detailed as it tells us that myId is an id of the
+                        div element. In the sample code below, <br><br> div { font-size: 10px; } <br> #myId { font-size: 12px; } <br> .myClass { font-size: 14px; }<br><br> &lt;div id=”myId” class=”myClass”&gt;Some text&lt;/div&gt;<br><br> Since the &lt;div&gt;
+                        element has class=”myClass” and id=”myId”, all three rules div, #myId and .myClass will apply to the &lt;div&gt; element. However, as id has the highest precedence, “Some text” will be displayed with a font size of 12px. <br><br>                        In addition, another point to note about specificity is that the more detailed your selector, the higher the precedence. For instance, div#myId has a higher precedence than #myId. This is because div#myId is considered to be more
+                        detailed as it tells us that myId is an id of the div element. In the sample code below, the color yellow will be applied. <br><br> div { color: red; } <br> div#myId { color: yellow; } <br> #myId { color: blue; } <br> .myClass
+                        { color: green; } <br><br> &lt;div id=”myId” class=”myClass”&gt;Some text&lt;/div&gt;
+                    </p>
+                    <h4>Principle 2: If no style is specified, elements inherit styles from their parent container</h4>
+                    <p>
+                        A child element is an element which lies entirely within the start and end tags of another element. For instance, in the code below, &lt;p&gt; is a child element of the &lt;body&gt; element. Since the font size of &lt;p&gt; is not defined, it’ll inherit
+                        this property from the &lt;body&gt; element for which the property is defined. <br><br> body { <br> &nbsp;&nbsp;&nbsp;&nbsp;font-size: 1.5em; <br> } <br> <br> &lt;body&gt; <br> &nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Some
+                        text&lt;/p&gt; <br> &lt;/body&gt; <br><br> If the font-size property is also not defined for the &lt;body&gt; element, the browser’s default font size will be used. <br><br>
+                    </p>
+                    <h4>Principle 3: All else being equal, the last declared rule wins</h4>
+                    <p>
+                        Suppose you have the following CSS declaration in your HTML &lt;head&gt; element. <br><br> &lt;head&gt; <br> &lt;style&lt; <br> &nbsp;&nbsp;&nbsp;&nbsp;p { font-size: 20px; } <br> &lt;/style&gt;
+
+                        <br> &lt;/head&gt;
+
+                        <br><br> Further down the HTML document, you have the following HTML code, with an inline CSS rule: <br><br> &lt;p style=”font-size: 30px;”&gt;Some text&lt;/p&gt; <br><br> Which rule do you think will be applied to the words “Some
+                        text”? <br><br> The correct answer is the inline rule. This is because all things being equal, the rule that is declared last has the highest precedence. Since inline CSS is declared within the HTML code, it is declared later than
+                        the embedded CSS which is declared in the head section. Hence, a font size of 30px will be applied. <br>
+                    </p>
+                    <h3>Display Inconsistence</h3>
+                    <p>
+                        Another issue to deal with when working with CSS is the problem of display inconsistency across browsers. You may find that your website looks slightly (or drastically) different in different browsers. Most display issues tend to occur in older versions
+                        of Internet Explorer, although issues can occur in other browsers too (especially mobile browsers). <br><br> Display inconsistencies occur because different browsers use different layout engines to interpret
+                        the site’s CSS code. For instance, Safari and Chrome use the WebKit engine while Firefox uses the Gecko engine. One engine may calculate and display a page differently from another engine. For instance Trident, the engine used
+                        by Internet Explorer, automatically widens a page’s pixel width for certain page designs. This can lead to the sidebar being pushed to the bottom due to insufficient width.<br><br> Another problem causing display inconsistency
+                        is the lack of universal support for some CSS properties. Some properties are not supported by all browsers. You can go to the site http://www.caniuse.com to check if a certain CSS property is supported by the browser that you
+                        are developing for. <br><br> Sometimes, a certain CSS property is supported by a particular browser only when we add a prefix to our CSS rules. This is especially true for newer properties in CSS3. An example is the column-count
+                        property in CSS3. This property divides an element into multiple columns. For instance, we can divide a div element into three columns by writing column-count: 3.<br><br> This property is not supported by older versions of Firefox,
+                        Chrome, Safari and Opera. To enable the property to work on these browsers, you have to write it as three declarations,<br><br> -webkit-column-count: 3; <br> -moz-column-count: 3;<br> column-count: 3;<br><br> instead of just <br><br>                        column-count: 3;<br><br> The -webkit- prefix adds support for older versions of Chrome, Safari and Opera while the -moz- prefix adds support for Firefox. In addition, we also have the -ms- prefix that adds support for Internet
+                        Explorer. <br><br> When creating your website, it is useful to test it on various browsers to ensure that nothing is broken. The way to fix a ‘broken’ display depends on the issue causing it. If you are really stuck, I suggest
+                        searching or posting the question on http://stackoverflow.com, which is a very useful online community for programmers.<br><br>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section -->
+        <section id="parte2" class="wrapper style2">
+            <div class="inner">
+                <div class="flex flex-2">
+                    <div class="col col2">
+                        <h3>Comments</h3>
+                        <p>In CSS, we add comments to our code using the /*...*/ symbols. An example is as follows:
+                        </p>
+                        <p>
+                            /* <br> The rules below are comments. <br><br> p {<br> &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;background-color: black;<br> &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;font-size: 20px;<br> &nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;color: white;<br> }
+
+                            <br> */
+
+                            <br><br> Everything between the /* and */ symbols is ignored by the browser.
+                        </p>
+
+                    </div>
+                    <div class="col col1 first">
+                        <div class="image round fit">
+                            <a class="link"><img src="images/textedit.jpg" alt="" /></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section -->
+        <section id="parte3" class="wrapper style1">
+            <div class="inner">
+                <!-- 2 Columns -->
+                <div class="flex flex-2">
+                    <div class="col col1">
+                        <div class="image round fit">
+                            <a class="link"><img src="images/comment.jpg" alt="" /></a>
+                        </div>
+                    </div>
+                    <div class="col col2">
+                        <h3>CSS Box Model</h3>
+                        <p>Due to a few technicalities, this note will not be on this website. Your tutor will take time to explain it and also provide you with videos to help you understand better. <br><br> We're really sorry about this.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section -->
+        <section id="parte4" class="wrapper style2">
+            <div class="inner">
+                <div class="flex flex-2">
+                    <div class="col col2">
+                        <h3>Positioning and Floating</h3>
+                        <p>Due to a few technicalities, this note will not be on this website. Your tutor will take time to explain it and also provide you with videos to help you understand better. <br><br> We're really sorry about this.</p>
+                    </div>
+                    <div class="col col1 first">
+                        <div class="image round fit">
+                            <a class="link"><img src="images/open.jpg" alt="" /></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section -->
+        <section id="parte5" class="wrapper style1">
+            <div class="inner">
+                <!-- 2 Columns -->
+                <div class="flex flex-2">
+                    <div class="col col1">
+                        <div class="image round fit">
+                            <a class="link"><img src="images/comment.jpg" alt="" /></a>
+                        </div>
+                    </div>
+                    <div class="col col2">
+                        <h3>Assignment</h3>
+                        <p>Develop a colorful webpage with a short profile of yourself and probably a few pictures. Submit this as a zip file to your tutor's WhatsApp
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+    </div>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="copyright">
+            <ul class="icons">
+                <li><a href="https://wa.me/2348087869811" class="icon fa-whatsapp"><span class="label">WhatsApp</span></a></li>
+            </ul>
+            <p>&copy; ORaCle Academy. All rights reserved. Images: <a href="https://unsplash.com">Unsplash</a>.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/skel.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

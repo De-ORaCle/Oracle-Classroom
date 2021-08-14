@@ -1,0 +1,77 @@
+@media screen and (min-width: 736px) {
+    #banner header h1 {
+        font-size: 34px;
+    }
+    #banner header p {
+        font-size: 18px;
+    }
+    #banner .inner {
+        padding: 0px 20px;
+    }
+}
+
+#header {
+    width: 100%;
+}
+
+#menu-btn {
+    margin-right: 16px;
+}
+
+.logo {
+    font-size: 16px;
+}
+
+#colOr,
+#coloR {
+    color: #f5a425;
+}
+
+#colOr:hover {
+    color: black;
+}
+
+#coloR:hover {
+    color: #fff;
+}
+
+div.frame {
+    display: block;
+    justify-content: space-between;
+}
+
+#myFrame1,
+#myFrame2,
+#myFrame3,
+#myFrame {
+    display: block;
+    background-color: #eeb04d;
+    height: 95px;
+    width: 285px;
+    margin-bottom: 10px;
+}
+
+@media screen and (max-width: 450px) {
+    #frameButton {
+        width: 40%;
+    }
+}
+
+#frameButton {
+    margin-bottom: 10px;
+    background-color: rgb(31, 27, 27);
+}
+
+.change-color {
+    color: #f5a425;
+}
+
+#output {
+    color: purple;
+    text-decoration: underline;
+}
+
+#center-link {
+    color: #f5a425;
+    text-align: center;
+}

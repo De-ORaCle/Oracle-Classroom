@@ -1,0 +1,397 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <title>Day 5 - Understanding CSS (Part 1)</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header id="header" class="alt">
+        <div class="logo"><a id="logo" href="day5.html">Virtual<span> Classroom</span></a></div>
+        <a id="menu-btn" href="#menu">Menu</a>
+    </header>
+
+    <!-- Nav -->
+    <nav id="menu">
+        <ul class="links">
+            <li><a href="../index.html">Homepage</a></li>
+            <li><a href="#parte1">Display and Visibilty</a></li>
+            <li><a href="#parte2">Background</a></li>
+            <li><a href="#parte3">Text and Font</a></li>
+            <li><a href="#parte4">Lists, links and Navigation Bars</a></li>
+            <li><a href="#parte5">Assignment</a></li>
+        </ul>
+    </nav>
+
+    <!-- Banner -->
+    <section id="banner">
+        <div class="inner">
+            <header>
+                <h1>Welcome back to your <span class="change-color">Virtual Class</span></h1>
+                <p>We've covered a basic introduction to Cascading StyleSheet, if you didn't catch that <a href="../Day4/day4.html" id="coloR">click here</a>. We'll be continuing with CSS today. It'll be a really long class, brace up. <br><br> You can't
+                    be too familiar with CSS. Trust me on this one. Tag along.</p>
+            </header>
+            <a href="#main" class="button big scrolly">Get down to business</a>
+        </div>
+    </section>
+
+    <!-- Main -->
+    <div id="main">
+
+        <!-- Section -->
+        <section id="parte1" class="wrapper style1">
+            <div class="inner">
+                <!-- 2 Columns -->
+                <div class="flex flex-2">
+                    <div class="col col1">
+                        <div class="image round fit">
+                            <a class="link"><img src="images/basics.jpg" alt="" /></a>
+                        </div>
+                    </div>
+                    <div class="col col2">
+                        <h3>Display and Visibility</h3>
+                        <p>Congratulations. You have now learned a fair bit of CSS. In fact, we have covered most of the important concepts in CSS, including the CSS box model and the idea of floating and positioning. Today, we’ll look at how to pull a disappearing
+                            act in CSS. <br><br>That’s right. CSS has not one, but two, properties that allow us to remove or hide an element. These two properties are the display and visibility properties.
+                        </p>
+                        <h4>Display</h4>
+                        <p>The CSS display property is used to modify how an element is displayed. There are three commonly used values: none, inline and block.<br><br> The first value ‘none’ makes an element disappear. The page will be displayed as if the
+                            element is not there.<br><br> The second value ‘inline’ causes an element to be displayed as an inline element. Recall that an inline element does not start and end with a new line. Another characteristic of an inline element
+                            is that it will only take up as much height and width as it needs. Hence, there is no point specifying the height and width of an inline element.<br><br> In contrast, a block element starts and ends with a new line and its
+                            height and width can be changed. If you want an element to be displayed as a block element, you use the ‘block’ value. <br><br>Example:<br><br>
+                            <em>display: none;</em>
+                        </p>
+                        <h4>Visibility</h4>
+                        <p>
+                            The CSS visibility property is used to hide an element. You do that by writing visibility: hidden;.<br><br>The difference between visibility: hidden and display: none is that for the former, the element is hidden but still
+                            takes up space. Using the visibility property is just like wearing an invisible cloak. The element is still there, even though you can’t see it.<br><br>In contrast, when you use display: none, the element is essentially removed
+                            from the page and the page will display as if the element does not exist at all.<br><br> For instance, suppose the two properties are applied to the word “magic” in the sentence “This is just like magic. You can make words
+                            disappear.” below:<br><br> For visibility: hidden; you’ll get<br> “This is just like&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; . You can make words disappear.”<br><br> For display: none; you’ll get <br> “This is just like . You can
+                            make words disappear.”
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section -->
+        <section id="parte2" class="wrapper style2">
+            <div class="inner">
+                <div class="flex flex-2">
+                    <div class="col col2">
+                        <h3>Background</h3>
+                        <p>
+                            Here we’ll learn how to change the background properties of an element. These properties include changing its background color and background image. <br><br>For a start, let us first look at how to change the background color.
+                        </p>
+                    </div>
+                    <div class="flex-different"></div>
+                    <div class="col col1 first">
+                        <div class="image round fit">
+                            <a class="link"><img src="images/textedit.jpg" alt="" /></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="external-wrap">
+                    <h4>Background Color</h4>
+                    <p>
+                        To declare the background color of an element, we use the background-color property. Similar to how we specify the border color of our CSS boxes, we can declare the background color of an element using one of three notations: color name, rgb notation
+                        or hexadecimal notation. <br><br>Examples:<br><br> background-color: green;<br> background-color: rgb(0, 255, 0);<br> background-color: #00FF00;<br>
+                    </p>
+                    <h4>Background Image</h4>
+                    <p>If you find it plain to just use color as the background of an element, you can choose to use an image. CSS allows us great flexibility in how we want the image to be displayed.</p>
+                    <h5>background-image</h5>
+                    <p>To use an image as the background, we specify the URL to the image using the background-image property. <br><br>Example:<br><br> background-image: url(“image1.jpg”);</p>
+                    <h5>background-repeat</h5>
+                    <p>
+                        By default, the background image is placed at the top-left corner of the element, and repeated both vertically and horizontally. If you do not want the background image to be repeated, you can use the background-repeat property to change it. The following
+                        list shows some commonly used values for the background-repeat property:<br><br>
+
+
+                        <span class="underline">repeat</span> <br> This is the default. Image will be repeated horizontally and vertically.<br><br>
+
+
+                        <span class="underline">repeat-x</span><br> Image will only be repeated horizontally.<br><br>
+
+
+                        <span class="underline">repeat-y</span><br> Image will only be repeated vertically.<br><br>
+
+
+                        <span class="underline">no-repeat</span><br> Image will not be repeated.<br><br> Example:
+
+
+                        <br>background-repeat: repeat-x;
+
+
+                    </p>
+                    <h5>background-attachment</h5>
+                    <p>
+                        The background-attachment property specifies whether the background image should be fixed or scroll with the page. The two commonly used values are fixed and scroll. <br><br>Example:<br><br> background-attachment: scroll;
+                    </p>
+                    <h5>background-position</h5>
+                    <p>
+                        The background-position property is very useful if you want to specify which area of the background image you want to display. <br><br> Suppose you have an element with width and height 100px each. If the background image that
+                        you use has width 200px and height 300px, only a portion of the background image will be displayed as the image is larger than the size of the element.
+                    </p>
+                    <img id="position" src="images/position.png" alt="">
+                    <p><br>For instance, if you use the image above (200px by 300px) as the background image of a 100px by 100px element, only Area A (top left) will be displayed by default. What if you want to display Area F instead? To do that, you need
+                        to change the value of the background-position property. <br><br> The most common way to specify the background-position value is to use pixels. The syntax is:<br><br> background-position: xpos ypos;<br><br> To understand how this
+                        syntax works, let’s imagine a piece of cardboard with a 100px by 100px hole in the middle. This hole in the cardboard represents the HTML element. Now imagine your background image is underneath that cardboard. By default, the
+                        image will be aligned such that Area A is shown through the hole in the cardboard. If you want to display Area F instead, you have to shift the image (not the cardboard) 100px to the left and 200px up. To achieve this with CSS,
+                        you write:<br><br> background-position: -100px -200px;<br><br> The first number (-100px) shifts the image horizontally. If this number is positive, the image is shifted to the right. If negative, it is shifted to the left.<br><br>                        The second number (-200px) shifts the image vertically. If this number is positive, the image is shifted down. If negative, it is shifted up.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section -->
+        <section id="parte3" class="wrapper style1">
+            <div class="inner">
+                <!-- 2 Columns -->
+                <div class="flex flex-2">
+                    <div class="col col1">
+                        <div class="image round fit">
+                            <a class="link"><img src="images/comments.jpg" alt="" /></a>
+                        </div>
+                    </div>
+                    <div class="col col2">
+                        <h3>Text and Font</h3>
+                        <p>
+                            Text and font properties in CSS are used to format the appearance of words and text on a webpage. The font property is concerned with how the characters look, such as whether they are ‘fat’ or ‘thin’, ‘big’ or ‘small’, and what font type to use. The text
+                            property is used to style everything else. In this part, we’ll be covering the text and font properties commonly used.
+                        </p>
+                    </div>
+                </div>
+                <div class="flex-outside">
+                    <h4>Font Properties</h4>
+                    <h5>font-family</h5>
+                    <p>
+                        The font-family property is used to set the font type. <br><br> There are three main categories of font types: serif, san serif and monospace.<br><br> Serif fonts have a small line at the end of some characters. Examples include
+                        “Times New Roman” and Georgia.<br><br> San Serif fonts do not have lines at the end of characters. Examples include Arial and Verdana.<br><br> Monospace fonts use the same amount of space for all characters. For instance, the letter
+                        ‘i’ has the same width as the letter ‘a’. Examples of monospace fonts include “Courier New” and “Lucida Console”. <br><br> When specifying the font-family property, you should always include several font names so that if the browser
+                        does not support the first font, it can try the next font until it finds one that it supports. Start with a more specific font (such as “Times New Roman”) and end with a generic font family. If the font name is more than one word,
+                        quotation marks should be used. <br><br>Example:<br><br> font-family: "Times New Roman", Times, serif;
+                    </p>
+                    <h5>font-size</h5>
+                    <p>
+                        The font-size property sets the size of the text. Font size can be set with pixels (px), em, percentage (%) or by using keywords. <br><br>
+
+
+                        <span class="underline">Using px</span><br><br> The default font size used on most browsers is 16 pixels. If you want your site to display with a different font size, you can specify it like this: font-size: 20px;.<br><br>
+                        <span class="underline">Using em</span><br><br> An em is is equal to the current font size. If the element is the child of another element, the current font size is the font size of the parent element. If the element is not a child
+                        of any element, the current font size is the browser’s default font size. As mentioned above, the default font size used on most browsers is 16px. Hence by default 1em = 16px.<br><br> However, this default font size can be changed
+                        by changing the browser’s setting. For instance, to change the default font size on Firefox, click on the menu button (the right most button with three horizontal lines), select “Options’ and finally select the “Content’ tab. You
+                        can then change the current font size under the ‘Fonts & Colors’ section.<br><br> If the user sets the default font size to 20px, 1em becomes 20px. If you want the font size to be 1.5 times the current font size, you simply write
+                        1.5em. The em is the prefered unit size used by most developers as the default font size can be customised by the user.<br><br><span class="underline">Using Percentage</span><br><br> Percentage is similar to em. 200% simply means
+                        2 times the current font size. Hence, 200% = 2em.<br><br><span class="underline">Using Keywords</span><br><br> The final way to specify font size is to use keywords. Commonly used keywords are xx-small, x-small, small, medium (this
+                        is the default), large, x-large and xx-large.<br><br>Examples:<br><br>font-size: 40px;
+                        <br> font-size: 1.5em;<br> font-size: 120%;<br> font-size: large;<br>
+                    </p>
+                    <h5>font-style</h5>
+                    <p>
+                        The font-style property is used to specify italic text. The two common values are normal and italic. Normal will display text with no italic while italic displays text in italic.<br><br> Example:<br><br> font-style: italic;
+                    </p>
+                    <h5>font-weight</h5>
+                    <p>
+                        The font-weight property is the counterpart of font-style. While font-style is used to specify italic text, font-weight is used to specify bold text. Commonly used values include normal, bold, bolder and lighter. Alternatively, you can also specify the
+                        thickness of the characters using numbers in multiples of 100, from 100 (thinnest) to 900 (thickest). 400 is the normal thickness, and 700 is the same as bold.<br><br> However, note that most web browsers
+                        only support normal and bold font weights. In that case, 100-500 correspond to normal while 600 and above correspond to bold.<br><br> Examples:
+
+
+                        <br><br> font-weight: bold;<br> font-weight: 300;<br>
+                    </p>
+                    <h4>Text Properties</h4>
+                    <p>
+                        CSS text properties allow you to set properties that are not related to the font of the text. Common properties include text color, text alignment, text decoration, letter spacing, word spacing and line height.
+                    </p>
+                    <h5>color</h5>
+                    <p>
+                        The CSS color property specifies the color of the text. Text color can be specified in one of three ways: using a color name, a RGB value or a hex value.<br><br> Examples:
+
+
+                        <br><br> color: blue;<br> color: #00ff00;<br> color: rgb(255,0,0);<br>
+                    </p>
+                    <h5>text-alignment</h5>
+                    <p>
+                        The text-alignment property allows us to specify whether we want text to be centered, or aligned to the left or right, or justified. The commonly used values are left, right, center and justify. <br><br> Example:
+
+
+                        <br><br> text-align: center;
+                    </p>
+                    <h5>text-decoration</h5>
+                    <p>
+                        The text-decoration property is mainly used to specify whether the text should be decorated with a line. The commonly used values are none (i.e. just normal text, no decoration), underline, overline (a line above the text) and line-through (a line through
+                        the text).<br><br> This property is commonly used to remove underlines from hyperlinks. By default, most browsers will display hyperlinks in blue, with an underline. You can use the code text-decoration:
+                        none; to remove the underline.<br><br> Example:
+
+
+                        <br><br> text-decoration: none;
+                    </p>
+                    <h5>letter-spacing</h5>
+                    <p>
+                        Letter spacing is used to increase or decrease the spacing between letters in a word. You specify the amount of spacing in pixels. To increase the spacing, use a positive value. To decrease it, use a negative value.<br><br> For
+                        instance, letter-spacing: 2px; will cause the letters to be spaced 2 pixels apart. letter-spacing: -1px; will cause the letters to be cramped together, overlapping each other by 1 pixel.<br><br> Example:
+
+
+                        <br><br> letter-spacing: 2px;
+                    </p>
+                    <h5>word-spacing</h5>
+                    <p>
+                        Word spacing, on the other hand, is used to increase or decrease the spacing between words in text. Similar to letter-spacing, you specify the amount of spacing in pixels, using positive to increase the spacing and negative to decrease it.<br><br>                        Example:
+
+
+                        <br><br>word-spacing: 2px;
+                    </p>
+                    <h5>line-height</h5>
+                    <p>
+                        Line height is used to set the spacing between each line of text. This property can be set using a number, a specific length, or a percentage.<br><br> When using a number to specify line-height, the given number will be multiplied
+                        with the current font size to give the line height. For instance, line-height: 2 will result in a line height of 32px if the current font size is 16px.<br><br> When using length to specify line-height, units such as px (pixel),
+                        em, cm, pt (point, where 1 point = 1/72 of 1in) etc can be used.<br><br> When using percentage, the given percentage will be multiplied with the current font size to give the line height. For instance, line-height: 50% will result
+                        in a line-height of 8px if the current font size is 16px. Note that line-height does not alter the font size. A line height of 8px will result in the lines overlapping each other.<br><br> Examples:
+
+
+                        <br><br> line-height: 20px;<br> line-height: 120%;<br>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section -->
+        <section id="parte4" class="wrapper style2">
+            <div class="inner">
+                <div class="flex flex-2">
+                    <div class="col col2">
+                        <h3>Lists, Links and Navigation Bars</h3>
+                        <p>In this part, we’ll be looking at CSS properties for styling hyperlinks and lists. In addition, we’ll combine both concepts and discuss how to create navigation bars commonly seen on web pages. Ready? Let’s first start with CSS
+                            list.
+                        </p>
+                        <h4>CSS Lists</h4>
+                        <p>
+                            Recall that in HTML, we can create two different types of list: ordered list and unordered list? We can style these lists using CSS list properties.
+                        </p>
+                    </div>
+                    <div class="col col1 first">
+                        <div class="image round fit">
+                            <a class="link"><img src="images/open.jpg" alt="" /></a>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h5>list-style-type</h5>
+                    <p>
+                        The list-style-type property allows you to set list item markers for your lists. List item markers refer to those bullets/numbers/letters on the left of each list item.<br><br> For ordered lists, we can specify the type of numbers
+                        or letters we want to use as markers. For instance, if we want to use roman numbers (e.g. i, ii, iii) as item markers, we can write list-style-type: lower-roman;. <br><br> Other commonly used markers include: <br><br> decimal (this
+                        is the default), <br> decimal-leading-zero (number with a leading zero, e.g. 01, 02..), <br> lower-alpha (e.g. a, b, c..), <br> lower-greek (e.g. α, β, γ..), <br> upper-alpha (e.g. A, B, C..) and <br> upper-roman (e.g. I, II, III…).<br><br>                        For unordered list, you can specify the shape that you want to use as the bullet. The default marker is a disc (a filled circle). You can change that to either a square or a circle.<br><br> In addition, you can also choose not
+                        to use any item marker for your list. To do that, you write list-style-type: none;. This is commonly done when creating navigation bars.<br><br> Examples:
+                        <br><br> list-style-type: lower-roman;<br> list-style-type: circle;<br> list-style-type: none;
+                    </p>
+                    <h5>list-style-image</h5>
+                    <p>
+                        If you do not fancy any of the provided list styles, you can choose to use an image as the list item marker. To do that, you use the list-style-image property to specify the url of the image to use.<br><br> Examples:
+                        <br><br> list-style-image: url(‘myMarker.gif’);
+                    </p>
+                    <h5>list-style-position</h5>
+                    <p>
+                        The list-style-position property is used to specify whether the list item markers should appear inside or outside the content flow. There are two acceptable values: inside and outside.<br><br> By default, list items are displayed
+                        with a certain amount of indentation. If list-style-position is set to inside, the list item markers are displayed after the indentation. The indentation is represented by the left edge of the boxes in the image below. If list-style-position
+                        is set to outside, the markers are displayed before the indentation.
+                    </p>
+                    <img src="images/list1.png" alt="" id="list-style">
+                    <p>
+                        In other words, list-style-position: inside will result in more indentation than list-style-position: outside. The default position is outside.<br><br> Examples:
+                        <br><br> list-style-position: outside;
+                    </p>
+                    <h5>list-style</h5>
+                    <p>
+                        list-style is a shorthand property for setting all the list properties (i.e. list-style-type, list-style-position and list-style-image) in one declaration. If any value is missing, the default value for the missing property will be used.<br><br>                        Examples:
+                        <br><br> list-style: square inside url("myMarker.gif");
+                    </p>
+                    <h4>CSS Links</h4>
+                    <p>
+                        Hyperlinks can be styled using any of the CSS properties discussed in previous chapters. You can style the background color using the background-color property. This will give the link a highlighted appearance. You can also use the text and font properties
+                        covered in above to change the font size, font style, text color, text decoration etc. <br><br> In addition, we can choose to style hyperlinks based on the state they are in. Links can be in one of four
+                        states: <br><br> link (an unvisited link)<br> visited (a visited link)<br> hover (when the user mouses over it), or<br> active (when the link is clicked). <br><br> To specify the state, we write a:link, a:visited, a:hover or a:active.
+                        You should always specify the 4 states in the order above.
+                    </p>
+                    <p>
+                        Examples:<br><br> a {<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;text-decoration: none;<br> }
+
+                        <br><br> a:link {<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;color: #0000FF;<br> }
+
+                        <br><br> a:visited {<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;color: #00FF00;<br> }
+
+                        <br><br> a:hover {<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;color: #FFFF00;<br> }
+
+                        <br><br> a:active {<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;color: #FF00FF;<br> }
+
+                        <br><br>
+                    </p>
+                    <h4>Navigation Bars</h4>
+                    <p>
+                        Navigation bars are commonly created as an unordered list in HTML and styled using list and link properties in CSS.<br><br> Let’s try creating our own navigation bar. First, we need to create an unordered list of items for our
+                        menu and make the list items clickable (as hyperlinks).<br><br> &lt;ul&gt;
+                        <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a href=”home.html”&gt;Home&lt;/a&gt;&lt;/li><br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a href=”htmltutorial.html”&lt;HTML Tutorial&lt;/a&gt;&lt;/li&gt;<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a
+                        href=”csstutorial.html”&gt;CSS Tutorial&lt;/a&gt;&lt;/li&gt;<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a href=”javascripttutorial.html”&gt;Javascript Tutorial&lt;/a&gt;&lt;/li&gt;<br> &lt;/ul&gt;
+
+                        <br><br> Next, let’s add the following declaration to our CSS style to remove the default bullet from the list.<br><br> ul {<br> &nbsp;&nbsp;&nbsp;&nbsp;list-style-type: none;<br> }
+
+                        <br> Now, we have to style the hyperlinks. We’ll use a block display which allows us to specify the width of the links. In addition, we’ll center align the text and remove all underlines. We’ll also add a background color to our
+                        links.
+                        <br><br> a {<br> &nbsp;&nbsp;&nbsp;&nbsp;display: block;<br> &nbsp;&nbsp;&nbsp;&nbsp;width: 160px;<br> &nbsp;&nbsp;&nbsp;&nbsp;text-align: center;<br> &nbsp;&nbsp;&nbsp;&nbsp;text-decoration: none;<br> &nbsp;&nbsp;&nbsp;&nbsp;background-color:
+                        #00FF00;
+                        <br> }
+
+                        <br><br> Finally, if we want the navigation bar to be a horizontal bar, we need to float the list items left. Otherwise, the list items will be displayed as a vertical bar.<br><br> Finally, if we want the navigation bar to be a
+                        horizontal bar, we need to float the list items left. Otherwise, the list items will be displayed as a vertical bar.<br><br> li {<br> &nbsp;&nbsp;&nbsp;&nbsp;float: left;<br> }
+
+                        <br><br> There you go! We’ve just created a simple horizontal navigation bar.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section -->
+        <section id="parte5" class="wrapper style1">
+            <div class="inner">
+                <!-- 2 Columns -->
+                <div class="flex flex-2">
+                    <div class="col col1">
+                        <div class="image round fit">
+                            <a class="link"><img src="images/image3.jpg" alt="" /></a>
+                        </div>
+                    </div>
+                    <div class="col col2">
+                        <h3>Assignment</h3>
+                        <p>To be given in the live class via Telegram.</p>
+                        <p>Contact your teacher to learn more.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="copyright">
+            <ul class="icons">
+                <li><a href="https://wa.me/2348087869811" class="icon fa-whatsapp"><span class="label">WhatsApp</span></a></li>
+            </ul>
+            <p>&copy; ORaCle Academy. All rights reserved. Images: <a href="https://unsplash.com">Unsplash</a>.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/skel.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

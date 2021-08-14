@@ -1,0 +1,164 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <title>Day 6 - Understanding CSS (Part 2)</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header id="header" class="alt">
+        <div class="logo"><a id="logo" href="day6 .html">Virtual<span> Classroom</span></a></div>
+        <a id="menu-btn" href="#menu">Menu</a>
+    </header>
+
+    <!-- Nav -->
+    <nav id="menu">
+        <ul class="links">
+            <li><a href="../index.html">Homepage</a></li>
+            <li><a href="#parte1">Tables</a></li>
+            <li><a href="#parte2">Project II</a></li>
+        </ul>
+    </nav>
+
+    <!-- Banner -->
+    <section id="banner">
+        <div class="inner">
+            <header>
+                <h1>Welcome back to your <span class="change-color">Virtual Class</span></h1>
+                <p>We've been covering CSS for a while now, if you didn't catch any of it <a href="../Day4/day4.html" id="coloR">click here</a>. We'll be covering tables in CSS and more today. We'll be rounding up CSS with this but it's not the end of it
+                    all.
+                    <br><br> At the end of this class is your second project, very important to access your understanding of CSS.</p>
+            </header>
+            <a href="#main" class="button big scrolly">Get down to business</a>
+        </div>
+    </section>
+
+    <!-- Main -->
+    <div id="main">
+
+        <!-- Section -->
+        <section id="parte1" class="wrapper style1">
+            <div class="inner">
+                <!-- 2 Columns -->
+                <div class="flex flex-2">
+                    <div class="col col1">
+                        <div class="image round fit">
+                            <a href="generic.html" class="link"><img src="images/basics.jpg" alt="" /></a>
+                        </div>
+                    </div>
+                    <div class="col col2">
+                        <h3>Tables</h3>
+                        <p>HTML tables are ugly looking by default. However, with some simple CSS styling, we can easily convert them into gorgeous looking tables. Today, we’ll look at how to do that.</p>
+                    </div>
+                </div>
+                <div>
+                    <h4>Border, Padding and Margin</h4>
+                    <p>
+                        The first set of properties we’ll be looking at is the border, padding and margin properties. Recall we talked about these properties when discussing the CSS box model? HTML tables (&lt;table&gt;) and table cells (&lt;th&gt; and &lt;td&gt;) follow the
+                        same box model as other CSS elements and can therefore be styled using these properties.<br><br> To understand how this work, refer to the diagram below (the words ‘Table Margin’ and ‘Table Padding’ are
+                        added for reference and do not exist on the actual table).
+                    </p>
+                    <img src="images/table.png" alt="" id="table-img">
+                    <p>
+                        The CSS rules for this table are as follows: <br><br> table {<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;border: dashed 1px black;<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;padding: 50px;<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;margin:
+                        60px;
+                        <br> }
+                        <br><br> th {<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;border: solid 1px black; <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;padding: 30px;<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;text-align: center;<br> }
+                        <br><br> td {<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;border: solid 1px black; <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;padding: 20px;<br> }
+                        <br><br> The dotted line is the table’s border. Space surrounding the dotted border is the table’s margin (declared to be 60px) and space within the dotted border is its padding (50px).<br><br> The first row (Firstname, Lastname,
+                        Age) is defined as the table heading using the &lt;th&gt; tag. Space surrounding the words ‘Firstname’, ‘Lastname’ and ‘Age’ is the padding for the &lt;th&gt; element (30px).<br><br> The second, third and fourth row is defined
+                        using the &lt;td&gt; tag. Space surrounding words like ‘Derek’, ‘Aaron’ and ‘31’ is the padding for the &lt;td&gt; element (20px).<br><br> No margins are declared for the &lt;th&gt; and &lt;td&gt; elements as margins are ignored
+                        for table cells. Hence, we cannot specify the spacing between the cells. By default, there’ll be a small gap between individual table cells. In addition, there’s also a gap between the table’s border (the dotted line) and the borders
+                        of the cells (the solid lines) even if you set table padding to 0px. If you only want one border, you have to use the border-collapse property:<br><br> border-collapse: collapse;<br><br> We’ll have a chance to play around with
+                        the border, padding and margin properties when we do the exercise for this chapter. For now, let’s move on to the next property.<br><br>
+                    </p>
+                    <h4>Height and Width</h4>
+                    <p>
+                        The width and height of a table can be set using the width and height properties. The values are normally given in pixels or as a percentage. For instance, the code below sets the table width to be 100% of the parent element and the height to be 500px.<br><br>                        table {<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;width: 100%;<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;height: 500px;<br> }
+                        <br><br> You can also use the height property at the tr, th or td level. For instance, if you want the table header row to have a height of 100px, you can write<br><br> th {<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;height: 100px;<br>                        }
+                        <br><br> In addition, you can set the width property at the table cell level (i.e. for the td and th elements). If you want the table cells to have a width of 200px, you can write<br><br> th {<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;width:
+                        200px;
+                        <br> }
+                        <br><br> If you want to style individual columns, you can use the id/class attribute to do it. For instance if you have the table structure below:<br><br> &lt;table&gt;
+                        <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;
+                        <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th id=”firstColumn”&gt;First Column&lt;/th&gt;<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th id=”secondColumn”&gt;First
+                        Column&lt;/th&gt;
+                        <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;
+                        <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;
+                        <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Some data&lt;/th&gt;<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;More data&lt;/th&gt;<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;
+                        <br> &lt;/table&gt;
+                        <br><br> you can set the width of the table columns individually like this:<br><br> #firstColumn {<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;width: 40%;<br> }
+                        <br><br> #secondColumn {<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;width: 60%;<br> }
+                        <br><br>
+                    </p>
+                    <h4>Text Alignment</h4>
+                    <p>
+                        Text within table cells can be aligned horizontally using the text-align property and vertically using the vertical-align property. The commonly used values for the text-align property are center, left, right and justify. The commonly used values for
+                        the vertical-align property are top, middle and bottom.<br><br> Examples:<br><br>th {<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;text-align: center;<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;vertical-align: middle;<br>                        }
+                    </p>
+                    <h4>Background, Font and Text</h4>
+                    <p>
+                        Tables can also be styled using properties for background, font and text. For instance, the code below will set the text color of &lt;th&gt; elements to white and give the elements a green background color.<br><br> th {<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;background-color:
+                        green;
+                        <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;color: white;<br> }
+                    </p>
+                    <h4>nth-child( ) Selector</h4>
+                    <p>
+                        Sometimes when we have a very large table with a lot of rows, the table may be difficult to read. <br> One way to improve the readability of large tables is to color alternating rows. This can be easily achieved with the nth-child(
+                        ) selector.<br><br> To color even rows, we write<br><br> tr:nth-child(even) {<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;background-color: lightgreen;<br> }
+                        <br><br> To color odd rows, we write<br><br> tr:nth-child(odd) {<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;background-color: lightgray;<br> }
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section -->
+        <section id="parte2" class="wrapper style2">
+            <div class="inner">
+                <div class="flex flex-2">
+                    <div class="col col2">
+                        <h3>Project II</h3>
+                        <p>
+                            Tade owns an agricultural start-up. His startup named "ReFine" provides customers with agricultural products delivering it to their doorsteps. <br><br> Tade knows it's hard to run such a business with customers having only
+                            the call option to order. He wants to build a website for a start where he can display his products and customers can select which they want. <br><br> Tade is not a web developer, he is an entrepreneur with no skill in programming
+                            or web development. Tade needs your help. Help Tade build a website for <b>ReFine</b> that displays the available agricultural products and other products that'll be available soon too.
+                        </p>
+                    </div>
+                    <div class="col col1 first">
+                        <div class="image round fit">
+                            <a class="link"><img src="images/open.jpg" alt="" /></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="copyright">
+            <ul class="icons">
+                <li><a href="https://wa.me/2348087869811" class="icon fa-whatsapp"><span class="label">WhatsApp</span></a></li>
+            </ul>
+            <p>&copy; ORaCle Academy. All rights reserved. Images: <a href="https://unsplash.com">Unsplash</a>.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/skel.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
