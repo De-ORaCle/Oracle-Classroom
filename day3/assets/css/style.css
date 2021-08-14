@@ -1,0 +1,46 @@
+@media screen and (min-width: 736px) {
+    #banner header h1 {
+        font-size: 34px;
+    }
+    #banner header p {
+        font-size: 18px;
+    }
+    #banner .inner {
+        padding: 0px 20px;
+    }
+}
+
+#colOr,
+#coloR {
+    color: #f5a425;
+}
+
+div.frame {
+    display: block;
+    justify-content: space-between;
+}
+
+#myFrame {
+    display: block;
+    background-color: honeydew;
+    height: 85px;
+    margin-bottom: 10px;
+}
+
+@media screen and (max-width: 450px) {
+    #myFrame {
+        width: 90%;
+    }
+    #frameButton {
+        width: 40%;
+    }
+}
+
+#frameButton {
+    margin-bottom: 10px;
+    background-color: rgb(70, 65, 65);
+}
+
+.change-color {
+    color: #f5a425;
+}

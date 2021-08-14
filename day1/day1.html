@@ -1,0 +1,207 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <title>Day 1 - Introduction to Programming</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header id="header" class="alt">
+        <div class="logo"><a id="logo" href="day1.html">Virtual<span> Classroom</span></a></div>
+        <a href="#menu">Menu</a>
+    </header>
+
+    <!-- Nav -->
+    <nav id="menu">
+        <ul class="links">
+            <li><a href="../index.html">Homepage</a></li>
+            <li><a href="#parte1">Introduction</a></li>
+            <li><a href="#parte2">What's HTML?</a></li>
+            <li><a href="#parte3">Tools of the Trade</a></li>
+            <li><a href="#parte4">Opening a .HTML file</a></li>
+            <li><a href="#parte5">Useful Blogposts</a></li>
+        </ul>
+    </nav>
+
+    <!-- Banner -->
+    <section id="banner">
+        <div class="inner">
+            <header>
+                <h1>Welcome to your <span class="change-color">First Virtual Class</span></h1>
+                <p>Hi! My name is Bukola Olapade, your tutor for the web development aspect of this tutorial. You probably already know that. <br> <br> First off, I welcome you to your first virtual class. This class is just for summary, except that things
+                    might even be more explained than the live classes therefore let's conclude it's here to help you out if you miss a live class. Even I couldn't find a better reason.</p>
+            </header>
+            <a href="#main" class="button big scrolly">Get down to business</a>
+        </div>
+    </section>
+
+    <!-- Main -->
+    <div id="main">
+
+        <!-- Section -->
+        <section id="parte1" class="wrapper style1">
+            <div class="inner">
+                <!-- 2 Columns -->
+                <div class="flex flex-2">
+                    <div class="col col1">
+                        <div class="image round fit">
+                            <a href="generic.html" class="link"><img src="images/intro.jpg" alt="" /></a>
+                        </div>
+                    </div>
+                    <div class="col col2">
+                        <h3>Introduction to Programming</h3>
+                        <p>Wikipedia defines Programming (Computer Programming) as the process of designing and building an executable computer program to accomplish a specific computing result or to perform a specific task. That's a great definition that
+                            I can't dispute except you begin to wonder that we're here for web development not 'programming'. <em>So why the heck is this guy defining 'programming' and why is that robot picture there? Are we here for robotics or what?</em></p>
+                        <p>First off, I'm not 'this guy'. I already told you my name's <b>Bukola</b>. Second off, I mean secondly, we're still on point, you're going to have to be patient dealing with me. Phew!</p>
+                        <p>The websites you visit daily are made of executable computer programs like yes, the ones wikipedia is talking about. All websites are made of computer programs, even Wordpress and Wix websites. The question now is "Is every website
+                            creator automatically a programmer?". Of course, the answer is a "no", I meant a capital "NO". Why should I call those WordPress website creators programmers? They probably don't know what HTML mean. It just occurred to me
+                            that you might not also know what HTML mean. Okay! Let's get to work.</p>
+                        <p>But wait, I might have lied about the definition of 'Computer Programming' but you'll never know if I really told a lie. Will you?</p>
+                        <a href="https://en.m.wikipedia.org/wiki/Computer_programming" class="button">What does Wiki really say?</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section -->
+        <section id="parte2" class="wrapper style2">
+            <div class="inner">
+                <div class="flex flex-2">
+                    <div class="col col2">
+                        <h3>What the heck is HTML?</h3>
+                        <p>HTML or Hypertext Markup Language. It allows the user to create and structure sections, paragraphs, headings, links, and blockquotes for web pages and applications. <br><br> HTML is not a programming language neither is CSS. HTML
+                            doesn't have the ability to create dynamic functionality. Sorry to burst your bubble but you can't also be called a programmer till you can create dynamic functionalities and that can't be done with HTML or CSS, but you can
+                            with JavaScript and PHP. So it doesn't just end with knowing HTML and CSS. I have tried arguing for your sake to consider HTML a programming language but a lot of programmers out there don't agree with me.</p>
+                        <p>HTML makes it possible to organize and format documents, similarly to Microsoft Word. When working with HTML, we use simple code structures (tags and attributes) to mark up a website page. For example, we can create a paragraph
+                            by placing the enclosed text within a starting <b>&lt;p&gt;</b> and closing <b>&lt;&#47;p&gt;</b> tag.</p>
+                        <div class="frame">
+                            <iframe id="myFrame" srcdoc="<p> &lt; p&gt;This is how you add a paragragh in HTML. &lt; &#47;p&gt;</p><p> &lt; p&gt;You can have more than one! &lt; &#47;p&gt;</p>"></iframe>
+                            <button id="frameButton" onclick="myFunction()">Run Code</button>
+                            <script>
+                                function myFunction() {
+                                    document.getElementById("myFrame").srcdoc = "<p> This is how you add a paragraph in HTML.</p> <p> You can have more than one!</p>";
+                                }
+                            </script>
+                        </div>
+                        <p>Overall, HTML is a markup language that is really straightforward and easy to learn even for complete beginners in website building. There is a whole history behind HTML but I'm not a storyteller so you don't expect to hear it
+                            from me.
+                        </p>
+                        <a href="https://en.m.wikipedia.org/wiki/HTML" class="button">Let's ask Wiki again</a>
+                    </div>
+                    <div class="col col1 first">
+                        <div class="image round fit">
+                            <a class="link"><img src="images/html.jpg" alt="" /></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section -->
+        <section id="parte3" class="wrapper style1">
+            <div class="inner">
+                <!-- 2 Columns -->
+                <div class="flex flex-2">
+                    <div class="col col1">
+                        <div class="image round fit">
+                            <a class="link"><img src="images/textedit.jpg" alt="" /></a>
+                        </div>
+                    </div>
+                    <div class="col col2">
+                        <h3>Tools of Trade</h3>
+                        <p>Before we start coding our HTML and CSS pages, let us first look at some of the recommended tools for doing web programming. </p>
+                        <p>At the most basic level, you only need a web browser (e.g. Internet Explorer, Chrome, Safari, Firefox) and a text editor (e.g. Notepad) to start coding websites. However, unless you belong to the school of thought that real programmers
+                            shouldn’t use any programming aid, I strongly encourage you to use some of the free tools available online to make your coding life easier.</p>
+                        <p>One of the most recommended tool is an advanced text editor that offers syntax highlighting. Syntax highlighting means the editor will display text in different colors depending on the purpose of the text. For instance, the editor
+                            may use red color for keywords, blue for comments and green for variables. This simple feature will make your code much easier to read and debug. If you are on your Laptop or PC, I advice you use VS code but if you're on your
+                            Smartphone, I advice you use Acode. Both are free to use.</p>
+                        <p>In tutorial videos that you'll have access to, you might come in contact with Sublime Text and other code editors. Some of these editors still perform syntax highlighting and are nearly similar to VS code but for the sake of this
+                            tutorial, I advice you get VS Code.</p>
+                        <a href="https://code.visualstudio.com/download" class="button">Check out VS Code</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section -->
+        <section id="parte4" class="wrapper style2">
+            <div class="inner">
+                <div class="flex flex-2">
+                    <div class="col col2">
+                        <h3>Opening a .HTML File</h3>
+                        <p>An .HTML file can be opened in two ways. One way is to open it in a web browser by double clicking on the file. This is for viewing the page. Another way is to open it in a text-editor for editing. To do that, first launch your
+                            text-editor and then open the file from within the editor.</p>
+                        <p>When working with HTML files, I suggest you open the file in your browser and text-editor concurrently and arrange the two windows so that they are side-by-side (For PC) or open it in Acode and in your browser also (For Smartphones).
+                            That way, you can edit the code on your editor, save it, and then move over to your browser, refresh the page and immediately check the effects of the changes you made to the code.</p>
+                    </div>
+                    <div class="col col1 first">
+                        <div class="image round fit">
+                            <a class="link"><img src="images/open.jpg" alt="" /></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section -->
+        <section id="parte5" class="wrapper style1">
+            <div class="inner">
+                <header class="align-center">
+                    <h2>Useful Articles That Could Help</h2>
+                    <p>We gathered a few useful articles that could help you understand more or answer a few of your subconcious questions.</p>
+                </header>
+                <div class="flex flex-3">
+                    <div class="col align-center">
+                        <div class="image round fit">
+                            <img src="images/htmlword.jpg" alt="" />
+                        </div>
+                        <p>WordPress vs HTML. Pro and cons. Which is better? Why learn HTML? Is HTML worth it? Someone at hostinger has something to say about this.</p>
+                        <a href="https://www.hostinger.com/tutorials/wordpress-vs-html" class="button">Go to site</a>
+                    </div>
+                    <div class="col align-center">
+                        <div class="image round fit">
+                            <img src="images/blog2.jpg" alt="" />
+                        </div>
+                        <p>How to Run a HTML File. Seems someone at WikiHow wish to tell us How. This piece of work might be really educative.</p>
+                        <a href="https://www.wikihow.com/Run-a-HTML-File" class="button">Go to site</a>
+                    </div>
+                    <div class="col align-center">
+                        <div class="image round fit">
+                            <img src="images/ide.jpg" alt="" />
+                        </div>
+                        <p>Programming sotware and the IDE. This is a very important article to read. It is important to know that there are special text editors called IDEs.</p>
+                        <a href="https://www.bbc.co.uk/bitesize/guides/zgmpr82/revision/4#:~:text=An%20integrated%20development%20environment%20(IDE,in%20the%20creation%20of%20software." class="button">Go to site</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="copyright">
+            <ul class="icons">
+                <li><a href="https://wa.me/2348087869811" class="icon fa-whatsapp"><span class="label">WhatsApp</span></a></li>
+            </ul>
+            <p>&copy; ORaCle Academy. All rights reserved. Images: <a href="https://unsplash.com">Unsplash</a>.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/skel.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

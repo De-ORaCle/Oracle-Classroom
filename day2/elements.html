@@ -1,0 +1,150 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>Elements in HTML</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body class="subpage">
+
+    <!-- Header -->
+    <header id="header">
+        <div class="logo"><a href="elements.html">Virtual <span>Classroom</span></a></div>
+        <a href="#menu">Menu</a>
+    </header>
+
+    <!-- Nav -->
+    <nav id="menu">
+        <ul class="links">
+            <li><a href="../index.html">Homepage</a></li>
+            <li><a href="day2.html">Day 2 - Basics</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main -->
+    <div id="main">
+        <section class="wrapper style1">
+            <div class="inner">
+
+                <header class="align-center">
+                    <h1>Elements</h1>
+                    <p>Now that we understand how HTML works, let us look at elements in detail.</p>
+                </header>
+
+                <!-- Content -->
+                <h2 id="content">Elements Within the Head Element</h2>
+                <p>As mentioned in the previous page, the head element provides general information about the document, such as its metadata, title and links to external resources. Let’s look at some of the tags within the head element. </p>
+                <div id="flex-together" class="row">
+                    <div class="6u 12u$(small)">
+                        <h3>&lt;meta&gt;</h3>
+                        <p>The &lt;meta&gt; tag is included within the &lt;head&gt;…&lt;/head&gt; tags and is used to provide additional information about the website to the browser, search engines or other web services. These information will not be displayed
+                            on the page itself. The &lt;meta&gt; tag does not have an end tag. One common use of the &lt;meta&gt; tag is to provide keywords for search engines. An example is:
+                        </p>
+                        <p>&lt;meta name="description" content=”This is my first Website. It teaches you how to use HTML and CSS"&gt;</p>
+                        <p>Another common use of the &lt;meta&gt; tag is to use it to specify how the browser should control the page zoom level and dimensions. This is done using the name=viewport attribute. For instance, you can write <br> <br>&lt;meta
+                            name="viewport" content="width=300, initial-scale=1"&gt; <br> <br> width=300 sets the width of the viewport to be equals to 300 pixels. One pixel, px, is equal to one dot on the computer screen. <br> <br>When you set the viewport
+                            to 300px and you have an image that is, say, 500 pixels wide, you will only see a portion of the image as the image’s width is larger than the width of the viewport. To see the rest of the image, you have to scroll the page.
+                            In contrast, if you set the viewport to 500px, the entire image will be shown without any scrolling needed. If you set the viewport to 1000px, the entire image will be shown too, but it’ll be smaller and occupy only half the
+                            width of the screen. <br> <br> initial-scale=1 sets the initial zoom level (1x in this case) of the page when it is first loaded by the browser.
+                        </p>
+                    </div>
+                    <div class="group-together">
+                        <div class="6u$ 12u$(small)">
+                            <h3>&lt;title&gt;</h3>
+                            <p>The &lt;title&gt; tag is used for defining the title that the browser should display on its title bar or on the page's tab.
+                            </p>
+                        </div>
+                        <!-- Break -->
+                        <div class="6u 12u$(small)">
+                            <h3>&lt;style&gt;...&lt;/style&gt;</h3>
+                            <p>The &lt;style&gt; tag is used to add internal CSS code to our HTML document. We’ll learn how to do that in Day 3. <br><br>Example:<br> &lt;style type=”text/css”&gt; <br> body { <br>   … <br> }<br> &lt;/style&gt;
+                            </p>
+                        </div>
+                        <div class="6u 12u$(small)">
+                            <h3>&lt;link&gt;</h3>
+                            <p>The &lt;link&gt; tag is used to link to an external resource, most commonly used to link to an external CSS stylesheet. It does not require an end tag. <br> <br>Example: <br> &lt;link rel="stylesheet" type="text/css" href="mystyle.css"&gt;
+                                <br> The rel and type attributes simply tell the browser that you are linking to a CSS stylesheet. You do not need to modify them. The only attribute that you need to modify is the href attribute. This attribute is used
+                                to state the path of the CSS file.
+                            </p>
+                        </div>
+                        <div class="6u 12u$(small)">
+                            <h3>How to write paths to external files</h3>
+                            <p>The path of any external file always starts from the current folder of the HTML document. Suppose we have five folders: ‘User’, ‘Documents’, ‘MyWebsite’, ‘MyCSS’ and ‘MoreCSS’ with the following structure: <br><br> User &gt;
+                                Documents &gt; MyWebsite &gt; MyCSS &gt; MoreCSS <br><br>That is, the ‘User’ folder contains the ‘Documents’ folder, which in turn contains the ‘MyWebsite’ folder. Within the ‘MyWesbite’ folder, we have the ‘MyCSS’ folder,
+                                which contains the ‘MoreCSS’ folder. <br><br>If you are working on a HTML file in ‘MyWebsite’ and you want to link to ‘mystyle.css’ in the SAME folder, you simply write href = “mystyle.css”. <br><br>However, if ‘mystyle.css’
+                                is in the ‘MyCSS’ folder (one level down), you have to write href = “MyCSS/mystyle.css”. If it is in ‘MoreCSS’ (two levels down), you have to write href = “MyCSS/MoreCSS/mystyle.css” <br><br>If ‘mystyle.css’ is in the ‘Documents’
+                                folder (one level up), you have to use ../ to move one level up. You write href = “../mystyle.css”. If it is in the ‘User’ folder, you have to move two levels up. You write href = “../../mystyle.css”.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <hr class="major" />
+
+                <h2 id="content1">Elements Within the Body Element</h2>
+                <p>Now that we’ve covered the elements within the head element,  let us move on to the body element.</p>
+                <div id="flex-together1" class="row">
+                    <div class="6u 12u$(small)">
+                        <h3>Elements for Adding Content to the Page</h3>
+                        <p>First, let us discuss some commonly used elements for adding content to our webpage. These tags are enclosed within the &lt;body&gt;...&lt;/body&gt; tags.</p>
+                    </div>
+                    <div class="group-together">
+                        <div class="6u$ 12u$(small)">
+                            <h3>&lt;p&gt;...&lt;/p&gt;</h3>
+                            <p>This is the paragraph tag and is used to add text to a page. Any content within the two tags will be displayed as a paragraph. By default, most browsers will add a line before and after a paragraph. <br> Example: <br> &lt;p&gt;This
+                                is a paragraph&lt;/p&gt; <br>
+                            </p>
+                        </div>
+                        <!-- Break -->
+                        <div class="6u 12u$(small)">
+                            <h3>&lt;img&gt;</h3>
+                            <p>This &lt;img&gt; tag is for adding images to your webpage. It requires you to provide some additional information like the location of the image, its height and width etc. Commonly used attributes of the &lt;img&gt; tag include:
+                                <br><br>src: Stands for “source” and is used to state the path of the image. The src attribute must be provided.<br><br>height:<br> For specifying the desired display height of the image <br><br>width:<br> For specifying
+                                the desired display width of the image<br><br>alt:<br> Stands for “alternate” and is used to specify the text to display if the image fails to load.<br><br>Example: <br>&lt;img src=”images/myImage.jpg” height=”100px” width=”100px”
+                                alt=”My Image”&gt; <br> <br> This will insert the image “myImage.jpg” onto the webpage. The image will be scaled to a size of 100px by 100px. If the image fails to load, the text “My Image” will be displayed instead.
+                            </p>
+                        </div>
+                        <div class="6u 12u$(small)">
+                            <h3>&lt;a&gt;...&lt;/a&gt;</h3>
+                            <p>The &lt;a&gt; tag is used to insert a hyperlink. The most important attribute for the &lt;a&gt; tag is href which is used to specify the URL of the page the link goes to. <br><br>Example: <br> &lt;a href=”http://www.google.com”&gt;Click
+                                here to go to Google&lt;/a&gt; <br><br>Output: <br><a id="output" href="http://www.google.com">Click here to go to Google</a>
+                            </p>
+                        </div>
+                        <div class="6u 12u$(small)">
+                            <h3>More Elements</h3>
+                            <p>There are a lot more elements like the h1 to h6 series, the ol and li tags, td and tr, span, div, script, header, footer. etc. <br><br>The rest are explained in a pptx document that you can download by clicking the button below.
+                            </p>
+                            <form method="get" action="Summary Slide.pptx"><button type="submit">Download File</button></form>
+                        </div>
+                        <a id="center-link" href="day2.html">Return to Previous Page</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="copyright">
+            <ul class="icons">
+                <li><a href="https://wa.me/2348087869811" class="icon fa-whatsapp"><span class="label">WhatsApp</span></a></li>
+            </ul>
+            <p>&copy; ORaCle Academy. All rights reserved. Images: <a href="https://unsplash.com">Unsplash</a>.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/skel.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

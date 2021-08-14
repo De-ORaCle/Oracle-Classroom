@@ -1,0 +1,253 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <title>Day 2 - Basics of HTML</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header id="header" class="alt">
+        <div class="logo"><a id="logo" href="day2.html">Virtual<span> Classroom</span></a></div>
+        <a id="menu-btn" href="#menu">Menu</a>
+    </header>
+
+    <!-- Nav -->
+    <nav id="menu">
+        <ul class="links">
+            <li><a href="../index.html">Homepage</a></li>
+            <li><a href="#parte1">What's HTML?</a></li>
+            <li><a href="#parte2">Basic Structure of HTML</a></li>
+            <li><a href="elements.html">More on Elements</a></li>
+            <li><a href="#parte3">Comments</a></li>
+            <li><a href="#parte4">Character Entities</a></li>
+            <li><a href="#parte5">Download Summary</a></li>
+            <li><a href="#parte6">Project I</a></li>
+        </ul>
+    </nav>
+
+    <!-- Banner -->
+    <section id="banner">
+        <div class="inner">
+            <header>
+                <h1>Welcome back to your <span class="change-color">Virtual Class</span></h1>
+                <p>We've covered a basic introduction to web programming yesterday, if you didn't catch that <a href="../Day1/day1.html" id="coloR">click here</a>. We'll be covering the essentials of HTML and more today. It'll be a really long class, brace
+                    up. <br><br> If you are familiar with HTML, then this is probably not for you. The rest of you who are new to HTML, let's get started.</p>
+            </header>
+            <a href="#main" class="button big scrolly">Get down to business</a>
+        </div>
+    </section>
+
+    <!-- Main -->
+    <div id="main">
+
+        <!-- Section -->
+        <section id="parte1" class="wrapper style1">
+            <div class="inner">
+                <!-- 2 Columns -->
+                <div class="flex flex-2">
+                    <div class="col col1">
+                        <div class="image round fit">
+                            <a class="link"><img src="images/basics.jpg" alt="" /></a>
+                        </div>
+                    </div>
+                    <div class="col col2">
+                        <h3>What is HTML?</h3>
+                        <p>HTML stands for Hypertext Markup Language and is a language used by web programmers to add content to a web page. A markup language is simply a language for annotating a document to explain what different sections of the text are
+                            and how they should be presented. For instance, we can use HTML to specify whether the content should be presented as a list or in table form. The current HTML version is HTML5.</p>
+                        <p>The nicest thing about HTML is that the source code of a web page is free for all to view. This makes it easy for us to learn HTML by studying the codes of other web pages. To view the source code of a web page on Windows, simply
+                            right-click anywhere on the page and select “View Source” (or something similar, such as “View Page Source”, depending on the browser you use). If you are on Mac, click on “View” in the menu bar, select “Developer” and then
+                            select “View Source”.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section -->
+        <section id="parte2" class="wrapper style2">
+            <div class="inner">
+                <div class="flex flex-2">
+                    <div class="col col2">
+                        <h3>Basis Structure of a HTML Page</h3>
+                        <p>An example of a basic HTML document is shown below. I’ve added numbers beside each line of the code for easy reference. These numbers are not part of the actual code.
+                        </p>
+                        <div class="frame">
+                            <iframe id="myFrame" srcdoc="<p> 1 &nbsp; &lt; !DOCTYPE HTML&gt; <br> 2 &nbsp; &lt; html&gt; <br> 3 &nbsp; &lt; head&gt; <br> 4 &nbsp;&nbsp;&nbsp;&nbsp; &lt; title&gt; My First HTML Page &lt; &#47;title&gt; <br> 5 &nbsp; &lt; &#47;head&gt; <br> 6 &nbsp; &lt; body&gt; <br> 7 &nbsp;&nbsp;&nbsp;&nbsp; &lt; p&gt; This is just a text &lt; &#47;p&gt; <br> 8 &nbsp; &lt; &#47;img src= &quot;someimage.jpg&quot; alt= &quot;Just some image&quot; &gt; <br> 9 &nbsp; &lt; &#47;body&gt; <br> 10 &lt; &#47;html&gt;</p>"></iframe>
+                        </div>
+                        <p>As you can see from the code above, HTML uses a lot of angle brackets with a single word enclosed inside, such as &lt;head&gt; and &lt;body&gt;. These are known as tags and each tag has a specific meaning in HTML.
+                        </p>
+                        <div class="structure-html">
+                            <div class="indi-structure">
+                                <h4>Doctype</h4>
+                                <p>On line 1, the &lt;!doctype html&gt; tag tells the browser that this document uses HTML5. If you check the source of older web pages, you may see something like &lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"&nbsp;"http://www.w3.org/TR/html4/strict.dtd"&gt;.
+                                    This means they are using other versions of HTML, such as HTML4.01 in this case.
+                                </p>
+                            </div>
+                            <div class="indi-structure">
+                                <h4>Elements</h4>
+                                <p>On line 2, the &lt;html&gt; tag tells the browser that the actual HTML code starts here. Most tags in HTML have a corresponding end tag. The end tag for the &lt;html&lt; tag is found on line 10. It has an additional forward
+                                    slash (/) before the word html. Note that not all tags in HTML have end tags. For instance, the &lt;img&gt; tag, which is used to add images to our webpage does not have an end tag. Generally, there is a need for an
+                                    end tag when we need to let the browser know where the effect of the tag should end. For instance, if we want to bold some text in HTML, we can write This text is &lt;strong&gt;important&lt;/strong&gt;, but this text
+                                    is not.
+                                </p>
+                                <p>We’ll get <br> This text is <strong> important</strong>, but this text is not. <br> The &lt;strong&gt; tag and the &lt;/strong&gt; tag tells the browser where the bold effect should start and where it should end. In contrast,
+                                    there is no need to tell the browser where an inserted image should end. Hence, the &lt;img&gt; tag does not require an end tag. <br> Elements in HTML are groups of matching tags. There are two basic elements in HTML:
+                                    The Head Element and the Body Element. <br> The tags that can be found in bother tags will be individually explain in coming slides but before then it is important to look at “start and end tags” for ease when dealing
+                                    with upcoming tags.
+                                </p>
+                            </div>
+                            <div class="indi-structure">
+                                <h4>The Head Element</h4>
+                                <p>On line 3, we have the start of the head element. <br> In the broadest sense, a HTML document is made up of two main elements, the head and the body elements. <br> The head element provides general information about the
+                                    document, including its meta data, title and links to additional resources. It starts with the &lt;head&gt; tag on line 3 and ends with the &lt;/head&gt; tag on line 5. Within the &lt;head&gt;...&lt;/head&gt; tags,
+                                    we enclose other tags that provide all these behind-the-scene information about the document. <br> In our example, we only included information about the title in our head element. The title element (on line 4) shows
+                                    the title that the browser should display on its title bar or on the page's tab. In this case, the text “My First HTML Page” will be displayed. We’ll cover more tags that are used within the head element in a later
+                                    section.
+
+                                </p>
+                            </div>
+                            <div class="indi-structure">
+                                <h4>The Body Element</h4>
+                                <p>Line 6 is where the body element starts. Contents within the &lt;body&gt;...&lt;/body&gt; tags will be displayed on the webpage. In our example, the text “This is just text” and the image “someimage.jpg” will be displayed.
+                                    <br> There are a lot of other tags that we can use inside the &lt;body&gt;...&lt;/body&gt; tags, such as the &lt;img&gt; tag for adding images, the &lt;table&gt; tag for displaying tables and the &lt;ul&gt; tag for
+                                    adding a list. We’ll cover these tags in details.
+                                </p>
+                            </div>
+                        </div>
+                        <a href="elements.html" class="button">More on Elements</a>
+                    </div>
+                    <div class="col col1 first">
+                        <div class="image round fit">
+                            <a class="link"><img src="images/textedit.jpg" alt="" /></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section -->
+        <section id="parte3" class="wrapper style1">
+            <div class="inner">
+                <!-- 2 Columns -->
+                <div class="flex flex-2">
+                    <div class="col col1">
+                        <div class="image round fit">
+                            <a class="link"><img src="images/comment.jpg" alt="" /></a>
+                        </div>
+                    </div>
+                    <div class="col col2">
+                        <h3>Comments</h3>
+                        <p>If you've checked out <strong><a id="colOr" href="elements.html">more on elements</a></strong> you'll notice that in the some examples, we used a lot of the &lt;!-- and --&gt; symbols? These are known as comments.
+                        </p>
+                        <p>Most of the time when we program, we need to add comments to our code to make it easier to read and understand. This is extremely important if we are working with other programmers or if we need to edit the source code at a later
+                            date. Comments are not displayed in the browser, they are merely added to explain our code.
+                        </p>
+                        <p>To add comments to a HTML documents, we use the &lt;!--... --&gt; tag.</p>
+                        <p>Example:</p>
+                        <div class="frame">
+                            <iframe id="myFrame1" srcdoc="<p> &lt; !--This is a comment. It will not be displayed in the browser.--! &gt;</p>"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section -->
+        <section id="parte4" class="wrapper style2">
+            <div class="inner">
+                <div class="flex flex-2">
+                    <div class="col col2">
+                        <h3>Character Entities</h3>
+                        <p>Some characters have predefined meanings in HTML and are reserved for that specific use. For instance, the less than sign (&lt;) is used to start all tags. What happens if we need to display the text 5 &lt; 12 on our webpage?</p>
+                        <p>To do that, we need to use character entities. Character entities always start with an ampersand sign (&) and end with a semi-colon (;). There are two ways to display the less than sign. We can either write &#38;lt; or &#38;#60;.
+                            The first is known as the entity name while the latter is known as the entity number. An entity name is easier to remember (lt stands for less than) but some browsers do not support all entity names. On the other hand, entity
+                            numbers are harder to remember but the support is better.
+                        </p>
+                        <p>Commonly used character entities include <br> Less than sign ( &lt;) &#38;lt;   or   &#38;#60; <br> Greater than sign (&gt;) &#38;gt;   or   &#38;#62; <br> Ampersand sign (&) &#38;amp;   or   &#38;#38; <br> For instance, if you
+                            want to display 5 &lt;12 on your website, you write it as 5&lt;12 in your HTML code. </p>
+                    </div>
+                    <div class="col col1 first">
+                        <div class="image round fit">
+                            <a class="link"><img src="images/open.jpg" alt="" /></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section -->
+        <section id="parte5" class="wrapper style1">
+            <div class="inner">
+                <!-- 2 Columns -->
+                <div class="flex flex-2">
+                    <div class="col col1">
+                        <div class="image round fit">
+                            <a class="link"><img src="images/image3.jpg" alt="" /></a>
+                        </div>
+                    </div>
+                    <div class="col col2">
+                        <h3>Download Summary</h3>
+                        <p>Coming down to the point where we round up for the day but we've done so much and you might have problems reading it all on the websites, so we developed a solution to solve that problem.</p>
+                        <p>Use the download button below to access a PPTX document type that explains everything we've done both yesterday and today.
+                        </p>
+                        <form method="get" action="Summary Slide.pptx"><button type="submit">Download File</button></form>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section -->
+        <section id="parte6" class="wrapper style2">
+            <div class="inner">
+                <div class="flex flex-2">
+                    <div class="col col2">
+                        <h3>Project I</h3>
+                        <p> Develop a plain HTML file/Webpage that explains broadly how the Internet Works. Make it as simple as possible. <br><br> Hint: Video 2 in the Video Library. <br><br> - Create a HTML file with your <b>text editor</b>. <br>- Set the
+                            title as "How the Internet Works" <br>- Adding pictures to your webpage is optional but would score you better. <br>- Using paragragh tags and heading tags, explain how the internet works as if you were explaining to someone
+                            who doesn't have a clue of what the internet is. <br>- This project is to be submitted latest by Thursday 4pm.
+                        </p>
+                        <ul>
+                            <li>Projects are a way to access your understading of an aspects and are really important.</li>
+                            <li>Best project gets a prize</li>
+                            <li>Failure to submit projects might have serious consequences.</li>
+                        </ul>
+                    </div>
+                    <div class="col col1 first">
+                        <div class="image round fit">
+                            <a class="link"><img src="images/open.jpg" alt="" /></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="copyright">
+            <ul class="icons">
+                <li><a href="https://wa.me/2348087869811" class="icon fa-whatsapp"><span class="label">WhatsApp</span></a></li>
+            </ul>
+            <p>&copy; ORaCle Academy. All rights reserved. Images: <a href="https://unsplash.com">Unsplash</a>.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/skel.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
